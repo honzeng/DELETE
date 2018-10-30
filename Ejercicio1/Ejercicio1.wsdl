@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 emmanuel estuvo aqui
 
 <?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Ejercicio1" targetNamespace="http://Ejercicio1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Ejercicio1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -16,6 +17,24 @@ emmanuel estuvo aqui
   
 =======
 
+=======
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Ejercicio1" targetNamespace="http://Ejercicio1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Ejercicio1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="Ejercicio1HttpBinding" originalBindingStyle="document"/>
+        <generatedXSD location="Ejercicio1_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  /* qwaszx*/
+  
+  
+  
+  
+=======
+
+>>>>>>> 24c73b6132772f93967216cf8990e421eb1846ac
 >>>>>>> 9084552a5bfa3c649addc714d0a0b253aaf8f80a
   <wsdl:types>
     
