@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Ejercicio1" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Ejercicio1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <xsd:element ibmSchExtn:docRoot="true" name="Convertir">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CedulaP" nillable="true" type="xsd:string"/>
+                <xsd:element name="Nombre" nillable="true" type="xsd:string"/>
+                <xsd:element name="Direccion" nillable="true" type="xsd:string"/>
+                <xsd:element name="Telefono" nillable="true" type="xsd:string"/>
+                <xsd:element name="Cuenta" nillable="true" type="xsd:string"/>
+                <xsd:element name="DatosGenerales" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ibmSchExtn:docRoot="true" name="ConvertirResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CedulaSP" nillable="true" type="xsd:string"/>
+                <xsd:element name="NombreS" nillable="true" type="xsd:string"/>
+                <xsd:element name="DireccionS" nillable="true" type="xsd:string"/>
+                <xsd:element name="TelefonoS" nillable="true" type="xsd:string"/>
+                <xsd:element name="CuentaS" nillable="true" type="xsd:string"/>
+                <xsd:element name="DatosGeneralesS" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>

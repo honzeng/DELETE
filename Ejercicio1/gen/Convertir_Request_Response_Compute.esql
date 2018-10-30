@@ -1,0 +1,44 @@
+BROKER SCHEMA gen
+DECLARE ns NAMESPACE 'http://Ejercicio1';
+
+
+CREATE COMPUTE MODULE Convertir_Request_Response_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		 CALL CopyMessageHeaders();
+		 CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		--SET OutputRoot = InputRoot;
+				IF NOT InputRoot.XMLNSC.ns:Convertir.DatosGenerales = 'riesgo' THEN
+					
+		SET OutputRoot.SOAP.Body.ns:ConvertirResponse.CedulaSP = REPLACE(InputRoot.XMLNSC.ns:Convertir.CedulaP, '.', '');
+		SET OutputRoot.SOAP.Body.ns:ConvertirResponse.NombreS = InputRoot.XMLNSC.ns:Convertir.Nombre;
+		SET OutputRoot.SOAP.Body.ns:ConvertirResponse.DireccionS = InputRoot.XMLNSC.ns:Convertir.Direccion;
+		SET OutputRoot.SOAP.Body.ns:ConvertirResponse.TelefonoS = InputRoot.XMLNSC.ns:Convertir.Telefono;
+		SET OutputRoot.SOAP.Body.ns:ConvertirResponse.CuentaS = InputRoot.XMLNSC.ns:Convertir.Cuenta;
+		SET OutputRoot.SOAP.Body.ns:ConvertirResponse.DatosGeneralesS = InputRoot.XMLNSC.ns:Convertir.DatosGenerales;
+		
+				ELSE
+					
+					SET OutputRoot.SOAP.Body.ns:ConvertirResponse.Respuesta = 'Error. Cliente no se puede actualizar: Reporte negativo YY';
+					
+				END IF;
+			
+			
+	
+	END;
+END MODULE;
+
