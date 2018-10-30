@@ -1,0 +1,16 @@
+
+
+Importing file: C:\Users\ahzeng\IBM\IIBT10\workspace\Lab2\Calculadora\Calculadora.wsdl
+
+The WSDL import will proceed with bindings CalculadoraHttpBinding.
+Creating wsdl schema document for platform:/resource/Calculadora/Calculadora.wsdl.
+Parsing wsdl binding {http://Calculadora}CalculadoraHttpBinding.
+Parsing wsdl binding input multiplicacion.
+Parsing wsdl binding output multiplicacion.
+Parsing wsdl binding input division.
+Parsing wsdl binding output division.
+Processing doc style for operation multiplicacion.
+Processing doc style for operation division.
+Populating WSDL schema Calculadora.xsd.
+Creating file Calculadora.xsd in the workspace.
+Copying source WSDL Calculadora.wsdl to Calculadora.wsdl.

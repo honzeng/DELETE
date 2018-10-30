@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Calculadora" xmlns:tns="http://Calculadora">
+      <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="multiplicacion">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="x" nillable="true" type="xsd:string"/>
+                <xsd:element name="y" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="multiplicacionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultado" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="division">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="x" nillable="true" type="xsd:string"/>
+                <xsd:element name="y" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+    <xsd:element xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" ibmSchExtn:docRoot="true" name="divisionResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="resultado" nillable="true" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

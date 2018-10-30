@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Calculadora" targetNamespace="http://Calculadora" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Calculadora" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="CalculadoraHttpBinding" originalBindingStyle="document"/>
+        <generatedXSD location="Calculadora_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  
+  
+  <wsdl:types>
+    
+        <xsd:schema targetNamespace="http://Calculadora" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+      <xsd:include schemaLocation="Calculadora_InlineSchema1.xsd"/>
+    </xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="multiplicacionRequestMsg">
+    <wsdl:part element="tns:multiplicacion" name="multiplicacionParameters"/>
+  </wsdl:message>
+  <wsdl:message name="multiplicacionResponseMsg">
+    <wsdl:part element="tns:multiplicacionResponse" name="multiplicacionResult"/>
+  </wsdl:message>
+    <wsdl:message name="divisionRequestMsg">
+    <wsdl:part element="tns:division" name="divisionParameters"/>
+  </wsdl:message>
+    <wsdl:message name="divisionResponseMsg">
+    <wsdl:part element="tns:divisionResponse" name="divisionResult"/>
+  </wsdl:message>
+    <wsdl:portType name="Calculadora">
+    <wsdl:operation name="multiplicacion">
+            <wsdl:input message="tns:multiplicacionRequestMsg" name="multiplicacionRequest"/>
+            <wsdl:output message="tns:multiplicacionResponseMsg" name="multiplicacionResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="division">
+            <wsdl:input message="tns:divisionRequestMsg" name="divisionRequest"/>
+            <wsdl:output message="tns:divisionResponseMsg" name="divisionResponse"/>
+    </wsdl:operation>
+    </wsdl:portType>
+  <wsdl:binding name="CalculadoraHttpBinding" type="tns:Calculadora">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="multiplicacion">
+      <soap:operation soapAction="http://Calculadora/multiplicacion"/>
+      <wsdl:input name="multiplicacionRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="multiplicacionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+        <wsdl:operation name="division">
+      <soap:operation soapAction="http://Calculadora/division"/>
+      <wsdl:input name="divisionRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="divisionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    </wsdl:binding>
+  <wsdl:service name="CalculadoraHttpService">
+    <wsdl:port binding="tns:CalculadoraHttpBinding" name="CalculadoraHttpPort">
+      <soap:address location="http://localhost:7800/Calculadora"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
