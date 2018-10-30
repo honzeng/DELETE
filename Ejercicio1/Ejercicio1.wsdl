@@ -45,5 +45,6 @@
     <wsdl:port binding="tns:Ejercicio1HttpBinding" name="Ejercicio1HttpPort">
       <soap:address location="http://localhost:7800/Ejercicio1"/>
     </wsdl:port>
+	jeidi estuvo aca
   </wsdl:service>
 </wsdl:definitions>
