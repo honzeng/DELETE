@@ -22,6 +22,8 @@ CREATE COMPUTE MODULE division_Request_Response_Compute
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 
+	--andres estuvo aca
+
 	SET OutputRoot.SOAP.Body.nsD:divisionResponse.xml.resultado =  div( CAST( InputRoot.XMLNSC.nsD:division.x as INTEGER), CAST( InputRoot.XMLNSC.nsD:division.y as INTEGER));
 	END;
 END MODULE;
