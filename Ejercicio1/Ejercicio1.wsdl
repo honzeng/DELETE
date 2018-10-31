@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Ejercicio1" targetNamespace="http://Ejercicio1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Ejercicio1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="Ejercicio1HttpBinding" originalBindingStyle="document"/>
+        <generatedXSD location="Ejercicio1_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  
+  
+  
+  <wsdl:types>
+    
+        <xsd:schema targetNamespace="http://Ejercicio1" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+      <xsd:include schemaLocation="Ejercicio1_InlineSchema1.xsd"/>
+    </xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="ConvertirRequestMsg">
+    <wsdl:part element="tns:Convertir" name="ConvertirParameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConvertirResponseMsg">
+    <wsdl:part element="tns:ConvertirResponse" name="ConvertirResult"/>
+  </wsdl:message>
+    <wsdl:portType name="Ejercicio1">
+    <wsdl:operation name="Convertir">
+            <wsdl:input message="tns:ConvertirRequestMsg" name="ConvertirRequest"/>
+            <wsdl:output message="tns:ConvertirResponseMsg" name="ConvertirResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+  <wsdl:binding name="Ejercicio1HttpBinding" type="tns:Ejercicio1">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Convertir">
+            <soap:operation soapAction="http://Ejercicio1/Convertir"/>
+            <wsdl:input name="ConvertirRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+      <wsdl:output name="ConvertirResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+    </wsdl:operation>
+    </wsdl:binding>
+  <wsdl:service name="Ejercicio1HttpService">
+    <wsdl:port binding="tns:Ejercicio1HttpBinding" name="Ejercicio1HttpPort">
+      <soap:address location="http://localhost:7800/Ejercicio1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

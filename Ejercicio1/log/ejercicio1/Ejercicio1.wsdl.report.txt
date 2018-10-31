@@ -1,0 +1,13 @@
+
+
+Importing file: C:\workspace\Lab03\Ejercicio1\Ejercicio1.wsdl
+
+The WSDL import will proceed with bindings Ejercicio1HttpBinding.
+Creating wsdl schema document for platform:/resource/Ejercicio1/Ejercicio1.wsdl.
+Parsing wsdl binding {http://Ejercicio1}Ejercicio1HttpBinding.
+Parsing wsdl binding input Convertir.
+Parsing wsdl binding output Convertir.
+Processing doc style for operation Convertir.
+Populating WSDL schema Ejercicio1.xsd.
+Creating file Ejercicio1.xsd in the workspace.
+Copying source WSDL Ejercicio1.wsdl to Ejercicio1.wsdl.
