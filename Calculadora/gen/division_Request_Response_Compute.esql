@@ -1,6 +1,6 @@
 BROKER SCHEMA gen
 DECLARE nsD NAMESPACE 'http://Calculadora';
-
+--perros todos
 
 CREATE COMPUTE MODULE division_Request_Response_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
@@ -21,6 +21,8 @@ CREATE COMPUTE MODULE division_Request_Response_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
+
+	--andres estuvo aca
 
 	SET OutputRoot.SOAP.Body.nsD:divisionResponse.xml.resultado =  div( CAST( InputRoot.XMLNSC.nsD:division.x as INTEGER), CAST( InputRoot.XMLNSC.nsD:division.y as INTEGER));
 	END;
